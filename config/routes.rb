@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
+  namespace :barpretender do
+    resources :ingredients
+    resources :cocktails
+    resources :users
+  end
+
   resources :ingredients
   resources :cocktails
   resources :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
 end
