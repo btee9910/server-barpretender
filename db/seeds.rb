@@ -1,8 +1,8 @@
-# u1 = Users.destroy_all
+u1 = User.destroy_all
 
-# u1 = Users.create(:username => 'sambid', :password => 'chicken', :admin => true, :is_overage => true)
-# u2 = Users.create(:username => 'tom', :password => 'chicken', :is_overage => true)
-
+u1 = User.create(:username => 'sambid', :password => 'chicken', :admin => true, :is_overage => true)
+u2 = User.create(:username => 'tom', :password => 'chicken', :is_overage => true)
+puts "#{ User.count } Users"
 
 Cocktail.destroy_all
 
@@ -45,6 +45,7 @@ c2 = Cocktail.create(:name => 'Margarita', :method => 'Rub the rim of a chilled 
 # c19 = Cocktail.create(:name => '', :method => '', :ingredients_list => '', :image => '')
 
 # c20 = Cocktail.create(:name => '', :method => '', :ingredients_list => '', :image => '')
+puts "#{ Cocktail.count } Cocktails"
 
 
 Ingredient.destroy_all
@@ -66,11 +67,12 @@ i5 = Ingredient.create(:name => 'tripe sec', :category => 'other_alcohol', :imag
 # i8 = Ingredient.create(:name => 'lemon', :category => 'other_ingredients', :image => '')
 
 # i9 = Ingredient.create(:name => 'egg', :category => 'other_ingredients', :image => '')
+puts "#{ Ingredient.count } Ingredients"
+
+puts "Users and Cocktails association"
+u1.cocktails << c1
 
 
-# puts "Users and Cocktails"
-# u1.cocktails << c1
-
-puts "Cocktails and Ingredients"
+puts "Cocktails and Ingredients association"
 c1.ingredients << i1 << i2 << i3
 c2.ingredients << i2 << i4 << i5
