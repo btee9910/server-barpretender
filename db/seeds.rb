@@ -26,7 +26,7 @@ c7 = Cocktail.create(:name => 'side car', :method => 'Rub the rim of a chilled c
 c8 = Cocktail.create(:name => 'tom collins', :method => 'Shake gin, lemon juice, and simple syrup with ice. Strain into a highball glass filled with ice. Top with soda water. Garnish with a lemon wheel and a cherry.', :ingredients_list => '60 ml gin, 30 ml lemon juice, 15 ml simple syrup, Soda water, Lemon wheel for garnish
     ', :image => '')
 
-c9 = Cocktail.create(:name => 'amaretto sour', :method => 'Shake amaretto, lemon juice, simple syrup, and egg white without ice for 10 seconds, add ice and shake again. Strain into a chilled coupette. Garnish with maraschino cherry.', :ingredients_list => '60 ml amaretto, 30 ml lemon juice, 15 ml simple syrup, 15 ml egg white, Orange slice and cherry for garnish
+c9 = Cocktail.create(:name => 'amaretto sour', :method => 'Shake amaretto, lemon juice, simple syrup, and egg white without ice for 10 seconds, add ice and shake again. Strain into a chilled coupette or rocks glass filled with ice. Garnish with maraschino cherry.', :ingredients_list => '60 ml amaretto, 30 ml lemon juice, 15 ml simple syrup, 15 ml egg white, Orange slice and cherry for garnish
     ', :image => '')
 
 c10 = Cocktail.create(:name => 'pisco sour', :method => 'Shake Pisco, lime juice, simple syrup, and egg white without ice. Add ice and shake again. Strain into a chilled rocks glass. Add a few dashes of Angostura bitters on top of the foam.', :ingredients_list => '60 ml Pisco, 30 ml lime juice, 15 ml simple syrup, 15 ml egg white, Angostura bitters', :image => '')
@@ -48,9 +48,9 @@ c16 = Cocktail.create(:name => 'rye old fashioned', :method => 'Muddle sugar cub
 
 c17 = Cocktail.create(:name => 'bourbon old fashioned', :method => 'Muddle sugar cube or simple syrup and bitters in a mixing glass. Add whiskey and ice, and stir until chilled. Strain into rocks glass over ice and garnish with an orange peel or a maraschino cherry.', :ingredients_list => '60 ml bourbon whiskey, 1 sugar cube or 5 ml simple syrup, 2 dashes Angostura bitters, Orange peel or maraschino cherry for garnish', :image => '')
 
-c18 = Cocktail.create(:name => 'bourbon whiskey sour', :method => 'Shake whiskey, lemon juice, simple syrup, and egg white without ice for 10 seconds, add ice and shake again. Double strain into a chilled coupette. Garnish with maraschino cherry.', :ingredients_list => '60 ml bourbon whiskey, 30 ml lemon juice, 15 ml simple syrup, 15 ml egg white, Maraschino cherry for garnish', :image => '')
+c18 = Cocktail.create(:name => 'bourbon whiskey sour', :method => 'Shake whiskey, lemon juice, simple syrup, and egg white without ice for 10 seconds, add ice and shake again. Double strain into a chilled coupette or rocks glass filled with ice. Garnish with maraschino cherry.', :ingredients_list => '60 ml bourbon whiskey, 30 ml lemon juice, 15 ml simple syrup, 15 ml egg white, Maraschino cherry for garnish', :image => '')
 
-c19 = Cocktail.create(:name => 'rye whiskey sour', :method => 'Shake whiskey, lemon juice, simple syrup, and egg white without ice for 10 seconds, add ice and shake again. Double strain into a chilled coupette. Garnish with maraschino cherry.', :ingredients_list => '60 ml rye whiskey, 30 ml lemon juice, 15 ml simple syrup, 15 ml egg white, Maraschino cherry for garnish', :image => '')
+c19 = Cocktail.create(:name => 'rye whiskey sour', :method => 'Shake whiskey, lemon juice, simple syrup, and egg white without ice for 10 seconds, add ice and shake again. Double strain into a chilled coupette or rocks glass filled with ice. Garnish with maraschino cherry.', :ingredients_list => '60 ml rye whiskey, 30 ml lemon juice, 15 ml simple syrup, 15 ml egg white, Maraschino cherry for garnish', :image => '')
 
 # c20 = Cocktail.create(:name => '', :method => '', :ingredients_list => '', :image => '')
 
