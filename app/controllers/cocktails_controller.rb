@@ -1,55 +1,22 @@
 class CocktailsController < ApplicationController
-    before_action :set_cocktail, only: [:show, :update, :destroy]
-  
+
     def index
-      @cocktails = Cocktail.all
-      render json: @cocktails
+        @cocktails = Cocktail.all
+        render json: @cocktails
     end
-  
-    def new
-      @cocktail = Cocktail.new     
-    #   render json: @cockails     probsbly don't need new. just here to see that it is creating in databas. could not figure out how to do that with json data 
-    end
-  
-    def create
-      cocktail = Cocktail.create(cocktail_params)
-  
-      if cocktail.save
-        render json: cocktail, status: :created
-      else
-        render json: cocktail.errors, status: :unprocessable_entity
-      end
-    end
-  
-    def edit         #PROB WILL NOT NEED EDIT IN FRONT END. JUST HERE TO CHECK IT'S WORKING
-        @cocktail = Cocktail.find params[:id]
-      end
-  
-    def update
-      if @cocktail.update(cocktail_params)
-        render json: @cocktail
-      else
-        render json: @cocktail.errors, status: :unprocessable_entity
-      end
-    end
-  
+
     def show
-      render json: @cocktail
+        @cocktail = Cocktail.find params[:id]
+
+        render json: @cocktail
     end
-  
-    def destroy
-      @cocktail.destroy
-      head :no_content
-    end
-  
+
+
     private
-  
-    def set_cocktail
-      @cocktail = Cocktail.find(params[:id])
+    def ingredient_params
+        params.require(:cocktail).permit(:name, :method, :ingredient_list, :image) #user id ?
     end
-  
-    def cocktail_params
-      params.require(:cocktail).permit(:name, :method, :ingredients_list, :user_id, :image)
-    end
-  end
-  
+
+end
+
+#{"id":3,"name":"Daiquiri","method":"Shake rum, lime juice, and simple syrup with ice. Double strain into a chilled coupette. Garnish with a lime twist.","ingredients_list":"60 ml white rum, 30 ml lime juice, 15 ml simple syrup, Lime twist for garnish","image":"","user_id":5,"created_at":"2023-05-14T07:45:04.509Z","updated_at":"2023-05-14T07:45:04.551Z"}
