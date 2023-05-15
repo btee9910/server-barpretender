@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    skip_before_action :is_authorized, only: [:create, :login, :index] # remove index after development is complete
+    # skip_before_action :is_authorized, only: [:create, :login, :index] # remove index after development is complete
 
     def user_profile
         render json: @user
