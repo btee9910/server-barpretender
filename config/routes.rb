@@ -10,7 +10,5 @@ Rails.application.routes.draw do
   resources :users
   post '/login', to: 'users#login'
   get '/profile', to: "users#user_profile" #this might cause an issue as it is specific to a user, might need to review if many users belong to cocktails
- 
-
 
 end
