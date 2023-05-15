@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class Barpretender::UsersController < ApplicationController
     before_action :check_for_admin, :only => [:index]
 
     def index
