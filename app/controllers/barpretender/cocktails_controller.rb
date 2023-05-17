@@ -7,23 +7,26 @@ class Barpretender::CocktailsController < ApplicationController
   end
 
   def new
-    @cocktail = Cocktail.new     
-  #   render json: @cockails     probsbly don't need new. just here to see that it is creating in databas. could not figure out how to do that with json data 
+    @cocktail = Cocktail.new
   end
 
   def create
-    cocktail = Cocktail.create(cocktail_params)
+    @cocktail = Cocktail.new(cocktail_params)
 
-    if cocktail.save
-      render json: cocktail, status: :created
+    if @cocktail.save
+      params[:ingredient_ids].each do |ingredient_id|
+        ingredient = Ingredient.find(ingredient_id)
+        @cocktail.ingredients << ingredient
+      end
+      render json: @cocktail, status: :created
     else
-      render json: cocktail.errors, status: :unprocessable_entity
+      render json: @cocktail.errors, status: :unprocessable_entity
     end
   end
 
-  def edit         #PROB WILL NOT NEED EDIT IN FRONT END. JUST HERE TO CHECK IT'S WORKING
-      @cocktail = Cocktail.find params[:id]
-    end
+  def edit
+    @cocktail = Cocktail.find(params[:id])
+  end
 
   def update
     if @cocktail.update(cocktail_params)
@@ -34,10 +37,12 @@ class Barpretender::CocktailsController < ApplicationController
   end
 
   def show
-    render json: @cocktail
+    @cocktail = Cocktail.includes(:ingredients).find(params[:id])
+    render json: @cocktail.to_json(include: :ingredients)
   end
 
   def destroy
+    @cocktail = Cocktail.find(params[:id])
     @cocktail.destroy
     head :no_content
   end
@@ -49,6 +54,6 @@ class Barpretender::CocktailsController < ApplicationController
   end
 
   def cocktail_params
-    params.require(:cocktail).permit(:name, :method, :ingredients_list, :user_id, :image)
+    params.require(:cocktail).permit(:name, :method, :image, :user_id, ingredient_ids: [])
   end
 end

@@ -1,5 +1,11 @@
 class User < ApplicationRecord
     has_secure_password
-    validates :username, :uniqueness => true, :presence => true
+    validates :username, uniqueness: true, presence: true
     has_many :cocktails
-end
+  
+    def as_json(options = {})
+      super(options.merge(include: :cocktails))
+    end
+    
+  end
+  

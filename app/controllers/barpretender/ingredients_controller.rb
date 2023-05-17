@@ -34,8 +34,9 @@ class Barpretender::IngredientsController < ApplicationController
     end
   
     def show
-      render json: @ingredient
-    end
+      @ingredient = Ingredient.includes(:cocktails).find(params[:id])
+      render json: @ingredient.as_json(include: :cocktails)
+    end    
   
     def destroy
       @ingredient.destroy
@@ -49,7 +50,7 @@ class Barpretender::IngredientsController < ApplicationController
     end
   
     def ingredient_params
-      params.require(:ingredient).permit(:name, :category, :image)
+      params.require(:ingredient).permit(:name, :category, :image, :cocktail_id)
     end
   end
   
