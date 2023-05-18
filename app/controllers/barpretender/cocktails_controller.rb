@@ -30,12 +30,18 @@ class Barpretender::CocktailsController < ApplicationController
 
   def update
     if @cocktail.update(cocktail_params)
+      new_ingredient_ids = params[:ingredient_ids].map(&:to_i)
+      @cocktail.ingredients = @cocktail.ingredients.select { |ingredient| new_ingredient_ids.include?(ingredient.id) }
+      new_ingredient_ids.each do |ingredient_id|
+        ingredient = Ingredient.find(ingredient_id)
+        @cocktail.ingredients << ingredient unless @cocktail.ingredients.include?(ingredient)
+      end
       render json: @cocktail
     else
       render json: @cocktail.errors, status: :unprocessable_entity
     end
   end
-
+  
   def show
     @cocktail = Cocktail.includes(:ingredients).find(params[:id])
     render json: @cocktail.to_json(include: :ingredients)

@@ -55,62 +55,58 @@ c19 = Cocktail.create(:name => 'Rye Whiskey Sour', :method => 'Shake whiskey, le
 # c20 = Cocktail.create(:name => '', :method => '', :ingredients_list => '', :image => '')
 
 c21 = Cocktail.create(:name => 'Bourbon Manhattan', :method => 'Stir whiskey, sweet vermouth, and bitters in a mixing glass filled with ice. Strain into a chilled coupette. Garnish with a maraschino cherry.', :ingredients_list => '60 ml bourbon whiskey, 30 ml sweet vermouth, 2 dashes Angostura bitters, Maraschino cherry for garnish
-    ', :image => 'http://localhost:3000/assets/cocktail_img/manhhattan.jpg')
-
-puts "#{ Cocktail.count } Cocktails"
+    ', :image => 'http://localhost:3000/assets/cocktail_img/manhattan.jpg')
 
 
 Ingredient.destroy_all
 
-i1 = Ingredient.create(:name => 'white rum', :category => 'base_spirit', :image => '')
+i1 = Ingredient.create(:name => 'white rum', :category => 'base_spirit', :image => 'http://localhost:3000/assets/ingredients_img/bitters.png')
 
-i2 = Ingredient.create(:name => 'lime', :category => 'other_ingredient', :image => '')
+i2 = Ingredient.create(:name => 'lime', :category => 'other_ingredient', :image => 'http://localhost:3000/assets/ingredients_img/lime.png')
 
-i3 = Ingredient.create(:name => 'simple syrup', :category => 'other_ingredient', :image => '')
+i4 = Ingredient.create(:name => 'tequila', :category => 'base_spirit', :image => 'http://localhost:3000/assets/ingredients_img/tequila.png')
 
-i4 = Ingredient.create(:name => 'tequila', :category => 'base_spirit', :image => '')
+i5 = Ingredient.create(:name => 'triple sec', :category => 'other_alcohol', :image => 'http://localhost:3000/assets/ingredients_img/triple_sec.png')
 
-i5 = Ingredient.create(:name => 'tripe sec', :category => 'other_alcohol', :image => '')
+i6 = Ingredient.create(:name => 'sweet vermouth', :category => 'other_alcohol', :image => 'http://localhost:3000/assets/ingredients_img/sweet_vermouth.png')
 
-i6 = Ingredient.create(:name => 'sweet vermouth', :category => 'other_alcohol', :image => '')
+i8 = Ingredient.create(:name => 'lemon', :category => 'other_ingredient', :image => 'http://localhost:3000/assets/ingredients_img/lemon.png')
 
-i8 = Ingredient.create(:name => 'lemon', :category => 'other_ingredient', :image => '')
+i9 = Ingredient.create(:name => 'egg', :category => 'other_ingredient', :image => 'http://localhost:3000/assets/ingredients_img/egg.png')
 
-i9 = Ingredient.create(:name => 'egg', :category => 'other_ingredient', :image => '')
+i10 = Ingredient.create(:name => 'vodka', :category => 'base_spirit', :image => 'http://localhost:3000/assets/ingredients_img/vodka.png')
 
-i10 = Ingredient.create(:name => 'vodka', :category => 'base_spirit', :image => '')
+i11 = Ingredient.create(:name => 'ginger beer', :category => 'other_ingredient', :image => 'http://localhost:3000/assets/ingredients_img/ginger_beer.png')
 
-i11 = Ingredient.create(:name => 'ginger beer', :category => 'other_ingredient', :image => '')
+i12 = Ingredient.create(:name => 'gin', :category => 'base_spirit', :image => 'http://localhost:3000/assets/ingredients_img/gin.png')
 
-i12 = Ingredient.create(:name => 'gin', :category => 'base_spirit', :image => '')
+i13 = Ingredient.create(:name => 'rye whiksy', :category => 'base_spirit', :image => 'http://localhost:3000/assets/ingredients_img/rye_whisky.png')
 
-i13 = Ingredient.create(:name => 'rye whiksey', :category => 'base_spirit', :image => '')
+i14 = Ingredient.create(:name => 'angostura bitters', :category => 'other_alcohol', :image => 'http://localhost:3000/assets/ingredients_img/bitters.png')
 
-i14 = Ingredient.create(:name => 'angostura bitters', :category => 'other_alcohol', :image => '')
+i15 = Ingredient.create(:name => 'campari', :category => 'other_alcohol', :image => 'http://localhost:3000/assets/ingredients_img/campari.png')
 
-i15 = Ingredient.create(:name => 'campari', :category => 'other_alcohol', :image => '')
+i16 = Ingredient.create(:name => 'brandy', :category => 'base_spirit', :image => 'http://localhost:3000/assets/ingredients_img/brandy.png')
 
-i16 = Ingredient.create(:name => 'brandy', :category => 'base_spirit', :image => '')
+i17 = Ingredient.create(:name => 'soda water', :category => 'other_ingredient', :image => 'http://localhost:3000/assets/ingredients_img/soda.png')
 
-i17 = Ingredient.create(:name => 'soda water', :category => 'other_ingredient', :image => '')
+i18 = Ingredient.create(:name => 'amaretto', :category => 'other_alcohol', :image => 'http://localhost:3000/assets/ingredients_img/amaretto.png')
 
-i18 = Ingredient.create(:name => 'amaretto', :category => 'other_alcohol', :image => '')
+i19 = Ingredient.create(:name => 'pisco', :category => 'base_spirit', :image => 'http://localhost:3000/assets/ingredients_img/pisco.png')
 
-i19 = Ingredient.create(:name => 'pisco', :category => 'base_spirit', :image => '')
+i20 = Ingredient.create(:name => 'simple syrup', :category => 'other_ingredient', :image => 'http://localhost:3000/assets/ingredients_img/sugar.png')
 
-i20 = Ingredient.create(:name => 'simple syrup', :category => 'other_ingredient', :image => '')
+i21 = Ingredient.create(:name => 'cranberry juice', :category => 'other_ingredient', :image => 'http://localhost:3000/assets/ingredients_img/cranberry_juice.png')
 
-i21 = Ingredient.create(:name => 'cranberry juice', :category => 'other_ingredient', :image => '')
+i22 = Ingredient.create(:name => 'sparkling wine', :category => 'other_alcohol', :image => 'http://localhost:3000/assets/ingredients_img/champagne.png')
 
-i22 = Ingredient.create(:name => 'sparkling wine', :category => 'other_alcohol', :image => '')
+i23 = Ingredient.create(:name => 'chambord', :category => 'other_alcohol', :image => 'http://localhost:3000/assets/ingredients_img/chambord.png')
 
-i23 = Ingredient.create(:name => 'chambord', :category => 'other_alcohol', :image => '')
+i24 = Ingredient.create(:name => 'pineapple juice', :category => 'other_ingredient', :image => 'http://localhost:3000/assets/ingredients_img/pineapple.png')
 
-i24 = Ingredient.create(:name => 'pineapple juice', :category => 'other_ingredient', :image => '')
+i25 = Ingredient.create(:name => 'dry vermouth', :category => 'other_alcohol', :image => 'http://localhost:3000/assets/ingredients_img/dry_vermouth.png')
 
-i25 = Ingredient.create(:name => 'dry vermouth', :category => 'other_alcohol', :image => '')
-
-i26 = Ingredient.create(:name => 'bourbon whiskey', :category => 'base_spirit', :image => '')
+i26 = Ingredient.create(:name => 'bourbon whiskey', :category => 'base_spirit', :image => 'http://localhost:3000/assets/ingredients_img/bourbon.png')
 
 puts "#{ Ingredient.count } Ingredients"
 
@@ -119,10 +115,10 @@ u1.cocktails << c1
 
 
 puts "Cocktails and Ingredients association"
-c1.ingredients << i1 << i2 << i3
+c1.ingredients << i1 << i2 << i20
 c2.ingredients << i2 << i4 << i5
 c3.ingredients << i10 << i2 << i11
-c4.ingredients << i12 << i2 << i3
+c4.ingredients << i12 << i2 << i20
 c5.ingredients << i13 << i6 << i14
 c6.ingredients << i12 << i6 << i15
 c7.ingredients << i16 << i5 << i8
