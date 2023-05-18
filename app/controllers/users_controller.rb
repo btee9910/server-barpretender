@@ -14,7 +14,14 @@ class UsersController < ApplicationController
     def create
         @user = User.create(user_params)
 
-        render json: @user, status: :created
+        if @user && @user.authenticate(params[:user][:password]) #If we do find a user we will also want to authenticate or validate that user based off of the credentials they have provided to us.
+            @token = JWT.encode({user_id: @user.id}, Rails.application.secrets.secret_key_base[0])
+
+            render json: {user: @user, token: @token}
+        else   
+            render json: {error: "Invalid Credentials"}, status: :unauthorized #send 404 to the network terminal
+        end
+        # render json: @user, status: :created
     end
 
     def login
@@ -32,7 +39,8 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:username, :password)
+        params.require(:user).permit(:username, :password, :is_overage)
+
     end
 
 end
