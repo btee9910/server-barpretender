@@ -15,7 +15,7 @@ c3 = Cocktail.create(:name => 'Moscow Mule', :method => 'Fill a copper mug or a 
 c4 = Cocktail.create(:name => 'Gimlet', :method => 'Shake ingredients in a cocktail shaker over ice. Double strain into chilled coupette and garnish with lime twist.', :ingredients_list => '60 ml gin, 30 ml lime juice, 15 ml simple syrup, Lime twist for garnish', :image => 'http://localhost:3000/assets/cocktail_img/gimlet.jpg')
 
 c5 = Cocktail.create(:name => 'Rye Manhattan', :method => 'Stir whiskey, sweet vermouth, and bitters in a mixing glass filled with ice. Strain into a chilled coupette. Garnish with a maraschino cherry.', :ingredients_list => '60 ml rye whiskey, 30 ml sweet vermouth, 2 dashes Angostura bitters, Maraschino cherry for garnish
-    ', :image => 'http://localhost:3000/assets/cocktail_img/manhattan.jpg')
+    ', :image => 'http://localhost:3000/assets/cocktail_img/manhattan_III.jpg')
 
 c6 = Cocktail.create(:name => 'Negroni', :method => 'Stir gin, sweet vermouth, and Campari in a mixing glass filled with ice. Strain into a rocks glass filled with ice. Garnish with an orange peel.', :ingredients_list => '30 ml gin, 30 ml sweet vermouth, 30 ml Campari, Orange peel for garnish
     ', :image => 'http://localhost:3000/assets/cocktail_img/negroni.jpg')
@@ -39,12 +39,12 @@ c12 = Cocktail.create(:name => 'French 75', :method => 'Shake gin, lemon juice, 
 c13 = Cocktail.create(:name => 'French Martini', :method => 'Shake vodka, Chambord and pineapple juice with ice. Double strain into chilled coupette, no garnish required. ', :ingredients_list => '45 ml vodka, 15 ml Chambord raspberry liqueur, 45 ml pineapple juice, Ice', :image => 'http://localhost:3000/assets/cocktail_img/french_martini.jpg')
 
 c14 = Cocktail.create(:name => 'Vodka Martini', :method => 'Stir vodka with vermouth in a mixing glass filled with ice. Double strain into a chilled coupette. Garnish with a lemon twist or olive.', :ingredients_list => '75 ml vodka, 10 ml dry vermouth, Lemon twist or olive for garnish
-    ', :image => 'http://localhost:3000/assets/cocktail_img/martini.jpg')
+    ', :image => 'http://localhost:3000/assets/cocktail_img/vodka_martini.jpg')
 
 c15 = Cocktail.create(:name => 'Gin Martini', :method => 'Stir gin with vermouth in a mixing glass filled with ice. Double strain into a chilled coupette. Garnish with a lemon twist or olive.', :ingredients_list => '75 ml gin, 10 ml dry vermouth, Lemon twist or olive for garnish
     ', :image => 'http://localhost:3000/assets/cocktail_img/martini.jpg')
 
-c16 = Cocktail.create(:name => 'Rye Old Fashioned', :method => 'Muddle sugar cube or simple syrup and bitters in a mixing glass. Add whiskey and ice, and stir until chilled. Strain into rocks glass over ice and garnish with an orange peel or a maraschino cherry.', :ingredients_list => '60 ml rye whiskey, 1 sugar cube or 5 ml simple syrup, 2 dashes Angostura bitters, Orange peel or maraschino cherry for garnish', :image => 'http://localhost:3000/assets/cocktail_img/')
+c16 = Cocktail.create(:name => 'Rye Old Fashioned', :method => 'Muddle sugar cube or simple syrup and bitters in a mixing glass. Add whiskey and ice, and stir until chilled. Strain into rocks glass over ice and garnish with an orange peel or a maraschino cherry.', :ingredients_list => '60 ml rye whiskey, 1 sugar cube or 5 ml simple syrup, 2 dashes Angostura bitters, Orange peel or maraschino cherry for garnish', :image => 'http://localhost:3000/assets/cocktail_img/old_fashioned.jpg')
 
 c17 = Cocktail.create(:name => 'Bourbon Old Fashioned', :method => 'Muddle sugar cube or simple syrup and bitters in a mixing glass. Add whiskey and ice, and stir until chilled. Strain into rocks glass over ice and garnish with an orange peel or a maraschino cherry.', :ingredients_list => '60 ml bourbon whiskey, 1 sugar cube or 5 ml simple syrup, 2 dashes Angostura bitters, Orange peel or maraschino cherry for garnish', :image => 'http://localhost:3000/assets/cocktail_img/old_fashioned.jpg')
 
@@ -52,12 +52,31 @@ c18 = Cocktail.create(:name => 'Bourbon Whiskey Sour', :method => 'Shake whiskey
 
 c19 = Cocktail.create(:name => 'Rye Whiskey Sour', :method => 'Shake whiskey, lemon juice, simple syrup, and egg white without ice for 10 seconds, add ice and shake again. Double strain into a chilled coupette or rocks glass filled with ice. Garnish with maraschino cherry.', :ingredients_list => '60 ml rye whiskey, 30 ml lemon juice, 15 ml simple syrup, 15 ml egg white, Maraschino cherry for garnish', :image => 'http://localhost:3000/assets/cocktail_img/whiskey_sour.jpg')
 
-# c20 = Cocktail.create(:name => '', :method => '', :ingredients_list => '', :image => '')
 
 c21 = Cocktail.create(:name => 'Bourbon Manhattan', :method => 'Stir whiskey, sweet vermouth, and bitters in a mixing glass filled with ice. Strain into a chilled coupette. Garnish with a maraschino cherry.', :ingredients_list => '60 ml bourbon whiskey, 30 ml sweet vermouth, 2 dashes Angostura bitters, Maraschino cherry for garnish
-    ', :image => 'http://localhost:3000/assets/cocktail_img/manhattan.jpg')
+    ', :image => 'http://localhost:3000/assets/cocktail_img/manhattan_II.jpg')
 
+c22 = Cocktail.create(:name => 'Espresso Martini', :method => 'Shake ingredients in a cocktail shaker over ice. Double strain into a chilled coupette and garnish with three coffee beans on top of the foam. ', :ingredients_list => '60ml vodka, 30ml espresso, 30ml simple syrup, Garnish with coffee beans', :image => 'http://localhost:3000/assets/cocktail_img/espresso_martini.jpg')    
 
+c23 = Cocktail.create(:name => 'Aperol Spritz', :method => 'Add Aperol and sparkling wine into a wine glass. Fill with ice. Top with soda and garnish with a slice of orange. ', :ingredients_list => '75ml sparkling wine, 50ml Aperol, Soda water, Garnish wish a slice of orange', :image => 'http://localhost:3000/assets/cocktail_img/aperol_spritz.jpg')    
+
+c24 = Cocktail.create(:name => 'Mojito', :method => 'Garnish with mint leaves and a wedge of lime
+    Muddle lime juice, lime wedges and mint leaves in a highball. Fill the glass with ice and top with soda. Stir and serve.', :ingredients_list => '60ml white rum, 3 lime wedges, 30ml simple syrup, 8 mint leaves, Soda water', :image => 'http://localhost:3000/assets/cocktail_img/mojito.jpg')    
+
+c25 = Cocktail.create(:name => 'Americano', :method => 'Add Campari and sweet vermouth into a highball. Fill the glass with ice and top with soda. Stir and garnish with a slice of orange. ', :ingredients_list => '45ml Campari, 45ml sweet vermouth, Soda water, Garnish with a slice of orange', :image => 'http://localhost:3000/assets/cocktail_img/americano.jpg')    
+
+c26 = Cocktail.create(:name => 'Gin Fizz', :method => 'Add gin, lemon juice and simple syrup to a cocktail shaker filled with ice. Shake then strain into a highball. Fill the highball with ice and top with soda. Garnish with lemon. ', :ingredients_list => '60ml gin, 20ml lemon juice, 15 ml simple syrup, Soda water, Garnish with a lemon slice', :image => 'http://localhost:3000/assets/cocktail_img/gin_fizz.jpg')    
+            
+
+c27 = Cocktail.create(:name => 'Hanky Panky', :method => 'Add gin, vermouth and fernet branch into a mixing glass filled with ice. Stir well until chilled. Strain into a chilled coupette. Garnish with an orange twist. ', :ingredients_list => '45ml gin, 45ml sweet vermouth, 5ml fernet branca, Garnish with a twist of orange', :image => 'http://localhost:3000/assets/cocktail_img/hanky_panky.jpg')    
+
+c28 = Cocktail.create(:name => 'White Lady', :method => 'Add gin, triple sec, lemon juice, simple syrup and egg white into an empty cocktail shaker. Shake hard for ten seconds, add ice then shake again. Double strain into a chilled coupette. No garnish required. ', :ingredients_list => '45ml gin, 20ml triple sec, 20ml lemon juice, 15ml simple syrup, 15ml egg white', :image => 'http://localhost:3000/assets/cocktail_img/white_lady.jpg')    
+
+c29 = Cocktail.create(:name => 'Gin Gin Mule', :method => 'Add lime juice, simple syrup, mint leaves and gin into a cocktail shaker filled with ice. Shake then double strain into a tumbler. Fill with ice and top with ginger beer. Garnish with mint and a lime wedge. ', :ingredients_list => '60ml gin, 20ml lime juice, 30ml simple syrup, 8 mint leaves, Ginger beer, Garnish with mint and lime wedge', :image => 'http://localhost:3000/assets/cocktail_img/gin_gin_mule.jpg')    
+        
+
+c30 = Cocktail.create(:name => 'Long Island Iced Tea', :method => 'Add all ingredients except cola to a highball glass. Fill the glass with ice. Top with cola and stir. Garnish with a lemon wedge.', :ingredients_list => '15ml vodka, 15ml white rum, 15ml tequila, 15ml gin, 15 ml triple sec, 15ml lemon juice, 15ml sugar syrup, Cola, Garnish with lemon wedge.', :image => 'http://localhost:3000/assets/cocktail_img/long_island_iced_tea.jpg')    
+   
 Ingredient.destroy_all
 
 i1 = Ingredient.create(:name => 'white rum', :category => 'base_spirit', :image => 'http://localhost:3000/assets/ingredients_img/bitters.png')
@@ -80,7 +99,7 @@ i11 = Ingredient.create(:name => 'ginger beer', :category => 'other_ingredient',
 
 i12 = Ingredient.create(:name => 'gin', :category => 'base_spirit', :image => 'http://localhost:3000/assets/ingredients_img/gin.png')
 
-i13 = Ingredient.create(:name => 'rye whiksy', :category => 'base_spirit', :image => 'http://localhost:3000/assets/ingredients_img/rye_whisky.png')
+i13 = Ingredient.create(:name => 'rye whiskey', :category => 'base_spirit', :image => 'http://localhost:3000/assets/ingredients_img/rye_whisky.png')
 
 i14 = Ingredient.create(:name => 'angostura bitters', :category => 'other_alcohol', :image => 'http://localhost:3000/assets/ingredients_img/bitters.png')
 
@@ -107,6 +126,17 @@ i24 = Ingredient.create(:name => 'pineapple juice', :category => 'other_ingredie
 i25 = Ingredient.create(:name => 'dry vermouth', :category => 'other_alcohol', :image => 'http://localhost:3000/assets/ingredients_img/dry_vermouth.png')
 
 i26 = Ingredient.create(:name => 'bourbon whiskey', :category => 'base_spirit', :image => 'http://localhost:3000/assets/ingredients_img/bourbon.png')
+
+i27 = Ingredient.create(:name => 'Espresso', :category => 'other_ingredient', :image => 'http://localhost:3000/assets/ingredients_img/espresso.png')
+
+i28 = Ingredient.create(:name => 'Aperol', :category => 'other_alcohol', :image => 'http://localhost:3000/assets/ingredients_img/aperol.png')
+
+i29 = Ingredient.create(:name => 'Mint', :category => 'other_ingredient', :image => 'http://localhost:3000/assets/ingredients_img/mint.png')
+
+i30 = Ingredient.create(:name => 'Fernet Branca', :category => 'other_alcohol', :image => 'http://localhost:3000/assets/ingredients_img/fernet_branca.png')
+
+i31 = Ingredient.create(:name => 'Cola', :category => 'other_ingredient', :image => 'http://localhost:3000/assets/ingredients_img/cola.png')
+
 
 puts "#{ Ingredient.count } Ingredients"
 
@@ -135,6 +165,16 @@ c17.ingredients << i26 << i20 << i14
 c18.ingredients << i26 << i8 << i20 << i9
 c19.ingredients << i13 << i8 << i20 << i9
 c21.ingredients << i26 << i6 << i14
+c22.ingredients << i10 << i20 << i27
+c23.ingredients << i28 << i22 << i17
+c24.ingredients << i1 << i2 << i20 << i29
+c26.ingredients << i12 << i8 << i20 << i17
+c25.ingredients << i15 << i6 << i17
+c27.ingredients << i12 << i6 << i30
+c28.ingredients << i12 << i8 << i20 << i5 << i9
+c29.ingredients << i12 << i2 << i20 << i29 << i11
+c30.ingredients << i10 << i1 << i4 << i12 << i5 << i8 << i20 << i31
+
 
 
 
